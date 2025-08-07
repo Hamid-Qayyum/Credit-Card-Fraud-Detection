@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fraud Prediction Graph</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+
+    <!-- Page Container -->
+    <div class="max-w-4xl mx-auto p-6 bg-white shadow-md rounded-lg mt-10">
+        <!-- Header Section -->
+        <div class="text-center">
+            <h1 class="text-4xl font-bold text-blue-600">Fraud Prediction Graph</h1>
+            <p class="mt-2 text-gray-600">Below is the graph of fraudulent vs non-fraudulent transactions based on your uploaded dataset.</p>
+        </div>
+
+        <!-- Graph Section -->
+        <div class="mt-6 text-center">
+            <img src="{{ graph_url }}" alt="Fraud Prediction Graph" class="w-full max-w-lg mx-auto rounded-lg shadow-lg">
+        </div>
+
+        <!-- Download Button -->
+        <div class="mt-8 text-center">
+            <a href="{% url 'download_graph' %}" class="bg-blue-600 text-white font-semibold px-6 py-3 rounded-md shadow-md hover:bg-blue-700 transition">
+                Download Graph
+            </a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center mt-10 text-gray-500">
+        &copy; 2024 Credit Card Fraud Detection System. All rights reserved.
+    </footer>
+
+</body>
+</html>
